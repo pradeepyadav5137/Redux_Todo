@@ -5,7 +5,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import './App.css'
-import counterReducer from "./slice";
+// import TodoReducer from "./slice";
 
 
 function App() {
@@ -30,7 +30,7 @@ function handleSubmit(e){
         <li key={index} className={(init.check.includes(index) ? "check": "")} > {task} 
         <EditIcon onClick= {()=> dispatch(editTask(index))}/>
         <DeleteIcon onClick= {()=> dispatch(DeleteTask(index))}/>
-        <CheckBoxIcon  onClick={()=> dispatch(setCheck(index))} />
+        <CheckBoxIcon  onClick={()=> dispatch(setCheck(timestamp))} />
         </li>
       )
     })}

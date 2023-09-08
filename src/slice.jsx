@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const counterSlice = createSlice({
+export const TodoSlice = createSlice({
      name: 'createSliceName',
      initialState: {
           input: "",
@@ -27,9 +27,12 @@ export const counterSlice = createSlice({
                   state.input = "";
           },
           DeleteTask: function (state, action,) {
-               state.tasks = state.tasks.filter((task, index) => {
-                    return index !== action.payload
-               })
+               {(state.check.includes(index)) ? " "  :
+                    state.tasks = state.tasks.filter((task, index) => {
+                         return index !== action.payload
+                    })
+               }
+              
           },
 
           setCheck: function (state, action) {
@@ -45,6 +48,6 @@ export const counterSlice = createSlice({
 
 })
 
-export const { setInput, addTask, DeleteTask, setCheck, editTask } = counterSlice.actions
-const counterReducer = counterSlice.reducer
-export default counterReducer
+export const { setInput, addTask, DeleteTask, setCheck, editTask } = TodoSlice.actions
+const TodoReducer = TodoSlice.reducer
+export default TodoReducer
