@@ -27,11 +27,11 @@ export const TodoSlice = createSlice({
                   state.input = "";
           },
           DeleteTask: function (state, action,) {
-               {(state.check.includes(index)) ? " "  :
+               // {(state.check.includes(index)) ? " "  :
                     state.tasks = state.tasks.filter((task, index) => {
                          return index !== action.payload
                     })
-               }
+               // }
               
           },
 

@@ -30,7 +30,7 @@ function handleSubmit(e){
         <li key={index} className={(init.check.includes(index) ? "check": "")} > {task} 
         <EditIcon onClick= {()=> dispatch(editTask(index))}/>
         <DeleteIcon onClick= {()=> dispatch(DeleteTask(index))}/>
-        <CheckBoxIcon  onClick={()=> dispatch(setCheck(timestamp))} />
+        <CheckBoxIcon  onClick={()=> dispatch(setCheck(index))} />
         </li>
       )
     })}
